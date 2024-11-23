@@ -1,0 +1,2 @@
+Install rofi
+At first it would run ugly but you will see a "Rofi Theme Selector", choose the gruvobx-dark-soft one from it.
