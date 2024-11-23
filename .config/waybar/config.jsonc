@@ -1,0 +1,96 @@
+{
+    "layer": "top",
+    "margin-left": 4,
+    "margin-right": 4,
+    "margin-top": 4,
+    "style": "style.css",
+    "modules-left": [
+        "hyprland/workspaces",
+        //"hyprland/submap",
+        "hyprland/window"
+    ],
+    "modules-center": ["clock", "power-profiles-daemon"],
+    "modules-right": [
+        "pulseaudio",
+        "battery",
+        "network",
+        "tray",
+        "custom/power"
+    ],
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "persistent-workspaces": {
+             "*": 5
+        },
+        "format-icons": {
+            "default": "",
+            "active": "",
+            "focused": ""
+        }
+    },
+    "hyprland/window": {
+        "max-length": 50
+    },
+    "battery": {
+        "format": "{capacity}% {icon} ",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "clock": {
+        "format": "{:%a, %d. %b  %H:%M}"
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": " {essid} ({signalStrength}%)",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "on-click": "/home/amogh/.config/hypr/rofi-wifi.sh"
+    },
+    "power-profiles-daemon": {
+        "format": "{icon} ",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon} {volume}% {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/power": {
+        "format": " ",
+        "on-click": "/home/amogh/.config/hypr/rofi-logout.sh",
+        "tooltip": true,
+        "tooltip-format": "Click for Rofi Logout Menu"
+    }
+}
