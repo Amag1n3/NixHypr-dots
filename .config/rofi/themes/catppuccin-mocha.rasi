@@ -1,0 +1,126 @@
+/**
+ * Catppuccin Mocha theme
+ * Color palette copied from https://catppuccin.com/palette
+ * https://github.com/hiimsergey/rofi-catppuccin
+ */
+
+* {
+    scrollbar: true;
+    base: #131920;
+    surface0: #313244;
+    overlay0: #6c7086;
+    text: #cdd6f4;
+
+    mauve: #cba6f7;
+    red: #f38ba8;
+    peach: #fab387;
+    green: #a6e3a1;
+    lavender: #b4befe;
+
+    background-color: #131920;
+    font: "JetBrainsMono Nerd Font Medium 11";
+}
+
+window {
+    height: 400;
+    width: 600;
+
+    border: 2;
+    border-radius: 0;
+    border-color: #89B4FA;
+}
+
+mainbox {
+    spacing: 0;
+    children: [inputbar, message, listview];
+}
+
+inputbar {
+    color: @text;
+    padding: 14;
+    background-color: @base;
+    font: @font;
+}
+
+message {
+    padding: 10;
+    background-color: @overlay0;
+    font: @font;
+}
+
+listview {
+    padding: 8;
+    border-radius: 0 0 10 10;
+    border: 2 2 2 2;
+    border-color: @base;
+    background-color: @base;
+    dynamic: false;
+    font: @font;
+}
+
+textbox {
+    text-color: @text;
+    background-color: inherit;
+    font: @font;
+}
+
+error-message {
+    border: 20 20 20 20;
+    font: @font;
+}
+
+entry, prompt, case-indicator {
+    text-color: inherit;
+    font: @font;
+}
+
+prompt {
+    margin: 0 10 0 0;
+    font: @font;
+}
+
+element {
+    padding: 5;
+    vertical-align: 0.5;
+    border-radius: 10;
+    background-color: @surface0;
+    font: @font;
+}
+
+element.selected.normal {
+    background-color: @overlay0;
+}
+
+element.alternate.normal {
+    background-color: inherit;
+}
+
+element.normal.active, element.alternate.active {
+    background-color: @peach;
+}
+
+element.selected.active {
+    background-color: @green;
+}
+
+element.normal.urgent, element.alternate.urgent {
+    background-color: @red;
+}
+
+element.selected.urgent {
+    background-color: @mauve;
+}
+
+element-text, element-icon {
+    size: 15;
+    margin: 0 10 0 0;
+    vertical-align: 0.5;
+    background-color: inherit;
+    text-color: @text;
+    font: @font;
+}
+
+element-text .active, element-text .urgent {
+    text-color: @base;
+    font: @font;
+}
