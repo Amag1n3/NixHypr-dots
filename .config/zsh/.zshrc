@@ -3,14 +3,14 @@
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-# export PKG_CONFIG_PATH="/nix/store/4ibrw2afjwz5zfrvzf7dncbwv375c1dc-alsa-lib-1.2.11-dev/lib/pkgconfig"
+export PKG_CONFIG_PATH="/nix/store/4ibrw2afjwz5zfrvzf7dncbwv375c1dc-alsa-lib-1.2.11-dev/lib/pkgconfig"
 
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="gnzh"
+# ZSH_THEME="gnzh"
 alias code="codium"
 alias ff="fastfetch"
 alias zed="zeditor"
@@ -18,7 +18,7 @@ alias hypr="cd .config/hypr && nvim hyprland.conf"
 alias btop="btop --utf-force -u 500"
 
 # Enable plugins
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting git golang)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting golang)
 
 
 
@@ -116,6 +116,5 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 # # Initialize Starship
-#eval "$(starship init zsh)"
+eval "$(starship init zsh)"
 [[ -s "$(command -v zoxide)" ]] && eval "$(zoxide init zsh)"
-
