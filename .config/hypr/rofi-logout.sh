@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
 # Prompt user for session management options
-CHOICE=$(echo -e "Logout\nRestart\nPower Off" | rofi -dmenu -i -p "Session")
+CHOICE=$(echo -e "Lock\nLogout\nRestart\nPower Off" | rofi -dmenu -i -p "Session")
 
 case "$CHOICE" in
+    Lock)
+        hyprlock ;;
     Logout)
         hyprctl dispatch exit ;;
     Restart)
@@ -13,4 +15,3 @@ case "$CHOICE" in
     *)
         exit 0 ;;
 esac
-
