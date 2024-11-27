@@ -15,6 +15,7 @@ in
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  system.autoUpgrade.enable = true;
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
 
@@ -149,6 +150,8 @@ in
   bluez
   unstable.bluedevil
   brightnessctl
+  obs-studio
+  wallust
 
   waybar
   mako
@@ -159,12 +162,15 @@ in
   libnotify
   hyprpaper
   rofi-wayland
+  rofi-file-browser
   networkmanagerapplet
   xdg-desktop-portal-gtk
   wlogout
   btop
   hyprpicker
+  hyprlock
   gnome.nautilus
+  starship
 
   ];
 
