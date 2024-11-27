@@ -1,0 +1,225 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* Master Config 1080p*/
+
+/* ---- Configuration ---- */
+
+configuration {
+    font:                       "JetBrainsMono Nerd Font Medium 11";
+    modi:                       "drun,run,filebrowser";
+    show-icons:                 true;
+    display-drun:               "Apps";
+    display-run:                "Run";
+    display-filebrowser:        "Files";
+    display-window:             "Windows";
+    drun-display-format:        "{name}";
+    hover-select:               true;
+    me-select-entry:            "MouseSecondary";
+    me-accept-entry:            "MousePrimary";
+    window-format:              "{w} · {c} · {t}";
+    dpi:                        1;
+}
+
+@theme "/home/amogh/.config/rofi/themes/catppuccin-mocha.rasi"
+
+/* ---- Global Properties ---- */
+* {
+    base:                       #131920;
+    surface0:                   #313244;
+    overlay0:                   #6c7086;
+    text:                       #cdd6f4;
+
+    mauve:                      #cba6f7;
+    red:                        #f38ba8;
+    peach:                      #fab387;
+    green:                      #a6e3a1;
+    lavender:                   #b4befe;
+
+    /*background-color:           #131920;*/
+    background-color:           #282828;     /*gruvbox colors*/
+    font:                       "JetBrainsMono Nerd Font Medium 11";
+}
+
+/* ---- Window ---- */
+window {
+    enabled:                    true;
+    fullscreen:                 false;
+    transparency:               "real";
+    cursor:                     "default";
+    spacing:                    0px;
+    border:                     2px 2px 2px 2px;
+    border-radius:              0px;
+    location:                   center;
+    anchor:                     center;
+
+    width:                      600;
+    height:                     500;
+    /*background-color:           @base;*/
+    background-color:           #282828;     /*Gruvbox colors*/
+    /*border-color:               #89B4FA;*/
+    border-color:               #D65D0E;     /*Gruvbox colors*/  
+}
+
+/* ----- Main Box ----- */
+mainbox {
+    padding:                    0px;
+    enabled:                    true;
+    orientation:                vertical;
+    children:                   [ "inputbar", "listbox" ];
+    background-color:           transparent;
+}
+
+/* ---- Inputbar ---- */
+inputbar {
+    enabled:                    true;
+    padding:                    17px;
+    /*background-color:           @base;*/
+    background-color:           #282828;        /*Gruvbox colors*/
+    border-radius:              25px;
+    orientation:                horizontal;
+    children:                   [ "entry", "dummy", "mode-switcher" ];
+}
+
+/* ---- Entry input ---- */
+entry {
+    enabled:                    true;
+    expand:                     false;
+    width:                      20%;
+    padding:                    10px;
+    border-radius:              12px;
+    background-color:           #665C54;           /*gruvbox colors*/
+    text-color:                 @text;
+    cursor:                     text;
+    placeholder:                "🖥️ Search ";
+    placeholder-color:          inherit;
+}
+
+/* ---- Listbox ---- */
+listbox {
+    spacing:                    10px;
+    padding:                    10px;
+    background-color:           transparent;
+    orientation:                horizontal;
+    children:                   [ "message", "listview" ];
+}
+
+/* ---- Listview ---- */
+listview {
+    enabled:                    true;
+    columns:                    2;
+    lines:                      6;
+    cycle:                      true;
+    dynamic:                    true;
+    layout:                     vertical;
+    reverse:                    false;
+    fixed-height:               false;
+    fixed-columns:              true;
+    spacing:                    10px;
+    background-color:           transparent;
+    border:                     0px;
+}
+
+/* ---- Dummy ---- */
+dummy {
+    expand:                     true;
+    background-color:           transparent;
+}
+
+/* ---- Mode Switcher ---- */
+mode-switcher {
+    enabled:                    true;
+    spacing:                    10px;
+    background-color:           transparent;
+}
+
+button {
+    width:                      5%;
+    padding:                    12px;
+    border-radius:              0px;
+    background-color:           @text;
+    text-color:                 @text;
+    cursor:                     pointer;
+}
+
+button selected {
+    background-color:           @background-color;
+    text-color:                 @text;
+}
+
+/* ---- Scrollbar ---- */
+scrollbar {
+    width:        4px ;
+    border:       0;
+    handle-color: #89F0E0;
+    handle-width: 8px ;
+    padding:      0;
+}
+
+/* ---- Elements ---- */
+element {
+    enabled:                    true;
+    spacing:                    10px;
+    padding:                    10px;
+    border-radius:              12px;
+    background-color:           @background-color;
+    cursor:                     pointer;
+}
+
+element.selected.normal {
+    background-color:           #665C54;        /*gruvbox colors*/
+}
+
+element.alternate.normal {
+    background-color:           @background-color;
+}
+
+element.normal.active, element.alternate.active {
+    background-color:           @peach;
+}
+
+element.selected.active {
+    background-color:           @green;
+}
+
+element.normal.urgent, element.alternate.urgent {
+    background-color:           @red;
+}
+
+element.selected.urgent {
+    background-color:           @mauve;
+}
+
+element-text, element-icon {
+    size:                       15;
+    margin:                     0 0 0 0;
+    vertical-align:             0.5;
+    background-color:           inherit;
+    text-color:                 @text;
+    font:                       @font;
+}
+
+element-text .active, element-text .urgent {
+    text-color:                 @base;
+    font:                       @font;
+}
+
+/* ---- Message ---- */
+message {
+    background-color:           transparent;
+    border:                     0px;
+}
+
+textbox {
+    padding:                    12px;
+    border-radius:              10px;
+    background-color:           @background-color;
+    text-color:                 @background-color;
+    vertical-align:             0.5;
+    horizontal-align:           0.0;
+}
+
+error-message {
+    padding:                    12px;
+    border-radius:              20px;
+    background-color:           @background-color;
+    text-color:                 @background-color;
+}
