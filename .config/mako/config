@@ -1,1 +1,11 @@
 default-timeout=5000
+font=JetBrainsMono Nerd Font Medium 11
+background-color=#1A2120
+text-color=#FE8019
+border-color=#A89984
+progress-color=over #313244
+anchor=top-center
+
+
+[urgency=high]
+border-color=#FB4934
