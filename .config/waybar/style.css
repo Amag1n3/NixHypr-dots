@@ -1,115 +1,120 @@
 * {
-	font-family: "JetBrainsMono Nerd Font";
-	font-weight: 700;
-	min-height: 0;
-	/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
-	font-size: 100%;
-	font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: 700;
+    min-height: 0;
+    /* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
+    font-size: 100%;
+    font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
 }
 
 #workspaces {
-	background: #282828;
-	text-shadow: none;
+    background: #282828;
+    text-shadow: none;
 }
 
 #window {
-	background: #282828;
-	color: #8ec07c;
-	padding-left: 4px;
+    background: #282828;
+    color: #8ec07c;
+    padding-left: 4px;
 }
 
 #workspaces button {
-	padding-left: 1.8px;
-	padding-right: 6px;
-	color: #fbf1c7;
+    padding-left: 4px;
+    padding-right: 4px;
+    color: #fbf1c7;
+    border-radius: 0px;
 }
 
 #workspaces button.active {
-	color: #fe8019;
+    color: #fe8019;
+    border-bottom: 2px solid #89f0e0;
+    border-radius: 0px;
+    padding-bottom: 2px;
 }
 
 #workspaces button:hover {
-	transition: none;
-	box-shadow: none;
-	text-shadow: none;
-	animation: none;
-	color: #d65d0e;
-	border: none;
-	/* border-color: #e8a2af; */
-	/* color: #e8a2af; */
+    transition: none;
+    box-shadow: none;
+    text-shadow: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    animation: none;
+    color: #eeeeec;
+    border: none;
+    border-radius: 0px;
+    border-bottom: 2px solid #89f0e0;
+    padding-bottom: 2px;
+    /* border-color: #e8a2af; */
 }
 
 window#waybar {
-	
-	background: transparent;
+    background: transparent;
 }
 
 #pulseaudio {
-	padding-right: 10px;
-	color: #fb4934;
-	background: #282828;
+    padding-right: 10px;
+    color: #fb4934;
+    background: #282828;
 }
 
 #clock {
-	padding-right: 10px;
-	color: #89f0e0;
-	background: #282828;
+    padding-right: 10px;
+    color: #89f0e0;
+    background: #282828;
 }
 
 #battery {
-	color: #fabd2f;
-	background: #282828;
+    color: #fabd2f;
+    background: #282828;
 }
 
 #network {
-	color: #689d6a;
-	background: #282828;
+    color: #689d6a;
+    background: #282828;
 }
 
 #power-profiles-daemon {
-	color: #fabd2f;
-	background: #282828;
+    color: #fabd2f;
+    background: #282828;
 }
 
 #tray {
-	padding-left: 4px;
-	padding-right: 4px;
-	background: #282828;
+    padding-left: 4px;
+    padding-right: 4px;
+    background: #282828;
 }
 
 #custom-power {
-	background: #282828;
-	padding-left: 2px;
+    background: #282828;
+    padding-left: 2px;
 }
 
 .modules-left {
-	background: #282828;
-	border: 1.5px solid #A89984;
-	padding-top: 2px;
-	padding-bottom: 2px;
-	padding-right: 10px;
-	padding-left: 4px;
-	border-radius: 10px;
-
+    background: #282828;
+    border: 1.5px solid #a89984;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 10px;
+    padding-left: 4px;
+    border-radius: 0px;
 }
 
 .modules-center {
-	background: #282828;
-	border: 1.5px solid #A89984;
-	padding-top: 2px;
-	padding-bottom: 2px;
-	padding-right: 10px;
-	padding-left: 10px;
-	border-radius: 10px;
-
+    background: #282828;
+    border: 1.5px solid #a89984;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 0px;
 }
 
 .modules-right {
-	background: #282828;
-	border: 1.5px solid #A89984;
-	padding-top: 2px;
-	padding-bottom: 2px;
-	padding-right: 10px;
-	padding-left: 10px;
-	border-radius: 10px;
+    background: #282828;
+    border: 1.5px solid #a89984;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 0px;
 }
